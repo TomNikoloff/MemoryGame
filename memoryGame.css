@@ -1,0 +1,32 @@
+body {
+    color: #252934;
+    font-size: 1em;
+    font-weight: 300;
+    line-height: 1.5;
+    font-family: "europa", sans-serif;
+  }
+
+:root{
+    --pseudo-color: #8c52ff;
+    }
+
+.rotate:hover
+{
+    -webkit-transform: rotateZ(-30deg);
+    -ms-transform: rotateZ(-30deg);
+    transform: rotateZ(-30deg);
+}
+
+.title {
+    font-size: 4rem;
+}
+
+.subtitle {
+    font-size: 3rem;
+    color: var(--pseudo-color);
+}
+
+.card {
+    height: 400px;
+    background-color: #252934;
+}
