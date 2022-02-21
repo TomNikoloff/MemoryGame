@@ -27,55 +27,59 @@
             <div class="container">
                 <h1 class="title text-center">Memory Game</h1>
                 <h2 class="subtitle text-center">Click on two cards to see if they match.</h2>
+           
+                <div class="row">
+                    <div class="col-4">
+                        <h3 class="text-center pt-5">Score:</h3>
+                    </div>
+                    <div class="col-4">
+                        <div class="btn_Div text-center">
+                            <button id="genBtn" class="btn link link--anim">
+                                Generate Cards
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <h3 class="text-center pt-5">Failed Attempts:</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4 p-2">
+                        <div id = "cardCoverOne" class="cardCover" onclick="memoryGame(this)">
+                            <img src="" class="card img-fluid mb-4">
+                        </div>
+                    </div>
+                    <div class="col-4 p-2">
+                        <div id = "cardCoverTwo" class="cardCover" onclick="memoryGame(this)">
+                            <img src="" class="card img-fluid mb-4">
+                        </div>
+                    </div>
+                    <div class="col-4 p-2">
+                        <div id = "cardCoverThree" class="cardCover" onclick="memoryGame(this)">
+                            <img src="" class="card img-fluid mb-4">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4 p-2">
+                        <div id = "cardCoverFour" class="cardCover" onclick="memoryGame(this)">
+                            <img src="" class="card img-fluid mb-4">
+                        </div>
+                    </div>
+                    <div class="col-4 p-2">
+                        <div id = "cardCoverFive" class="cardCover" onclick="memoryGame(this)">
+                            <img src="" class="card img-fluid mb-4">
+                        </div>
+                    </div>
+                    <div class="col-4 p-2">
+                        <div id = "cardCoverSix" class="cardCover" onclick="memoryGame(this)">
+                            <img src="" class="card img-fluid mb-4">
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="row">
-                <div class="col-4">
-                    <h3 class="text-center pt-5">Score:</h3>
-                </div>
-                <div class="col-4">
-                    <div class="btn_Div text-center">
-                        <button id="genBtn" class="btn link link--anim">
-                            Generate Cards
-                        </button>
-                    </div>
-                </div>
-                <div class="col-4">
-                    <h3 class="text-center pt-5">Failed Attempts:</h3>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-4 p-2">
-                    <div class="cardCover">
-                        <img src="" class="card img-fluid mb-4">
-                    </div>
-                </div>
-                <div class="col-4 p-2">
-                    <div class="cardCover">
-                        <img src="" class="card img-fluid mb-4">
-                    </div>
-                </div>
-                <div class="col-4 p-2">
-                    <div class="cardCover">
-                        <img src="" class="card img-fluid mb-4">
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-4 p-2">
-                    <div class="cardCover">
-                        <img src="" class="card img-fluid mb-4">
-                    </div>
-                </div>
-                <div class="col-4 p-2">
-                    <div class="cardCover">
-                        <img src="" class="card img-fluid mb-4">
-                    </div>
-                </div>
-                <div class="col-4 p-2">
-                    <div class="cardCover">
-                        <img src="" class="card img-fluid mb-4">
-                    </div>
-                </div>
+            <div>
+                <h3 id="memGame-Result" class="text-center"></h3>
             </div>
         </section>
         
