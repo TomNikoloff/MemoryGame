@@ -30,7 +30,6 @@ body {
     height: 400px;
     background-color: #252934;
     border-radius: 10px;
-    padding: 10px;
 }
 
 .card {
@@ -39,7 +38,12 @@ body {
     width: 100%;
     max-height: 100%;
     border-radius: 10px;
-    border: #252934 1px solid;
+    border: #252934 5px solid;
+    background-color: #252934;
+}
+
+.open{
+    background-color: transparent !important;
 }
 
 .btn_Div {
