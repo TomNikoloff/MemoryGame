@@ -46,6 +46,10 @@ body {
     background-color: transparent !important;
 }
 
+.disableClick {
+    pointer-events: none;
+}
+
 .btn_Div {
     font-size: 20px;
     border: #252934 solid 3px;

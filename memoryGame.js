@@ -1,3 +1,5 @@
+let flippedCards = [];
+
 
 const genCards = document.querySelector('#genBtn');
 let cardCover = document.querySelectorAll('.cardCover');
@@ -21,23 +23,33 @@ genCards.addEventListener('click', generateCards);
 */
 
 
-/*
-
-function gameResult(firstCard, secondCard) {
-    if (firstCard.src === secondCard.src) {
-        result.appendChild(document.createTextNode('You Win'));
-    } else {
-        result.appendChild(document.createTextNode('You Lost'));
-    }
-}
-
-*/
-
 for (let i = 0; i < cardCover.length; i++) {
-   cardCover[i].addEventListener('click', displayCard);
+   cardCover = cardCover[i];
+   cardCover.addEventListener('click', displayCard);
+   cardCover.addEventListener('click', checkPair);
 };
 
 function displayCard() {
     this.classList.toggle("open");
+    this.classList.toggle("disableClick");
 }
 
+function checkPair() {
+
+/*need to push child of cardCover*/
+    flippedCards.push(this);
+
+    if (flippedCards[0].src === flippedCards[1].src) {
+        matchedCards();
+    } else {
+        unmatchedCards();
+    }
+}
+
+function matchedCards() {
+
+}
+
+function unmatchedCards() {
+
+}
