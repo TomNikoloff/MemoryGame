@@ -1,15 +1,10 @@
 
 const genCards = document.querySelector('#genBtn');
-let cardCover = document.getElementsByClassName('cardCover');
+let cardCover = document.querySelectorAll('.cardCover');
 let cards = document.querySelectorAll('.card');
-let testDiv = document.querySelector('#testDiv');
-let testCard = document.querySelector('#test');
 let result = document.querySelector('#memGame-Result');
 const imgArray = ['img/lolaOne.jpg','img/lolaTwo.jpg', 'img/lolaTHree.jpg'];
 
-let cardCovers = [...cardCover];
-
-let allCards = [...cards];
 
 /*
 function randomNum() {
@@ -41,8 +36,6 @@ function gameResult(firstCard, secondCard) {
 for (let i = 0; i < cardCover.length; i++) {
    cardCover[i].addEventListener('click', displayCard);
 };
-
-
 
 function displayCard() {
     this.classList.toggle("open");
