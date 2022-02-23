@@ -6,27 +6,32 @@ let cardCover = document.querySelectorAll('.cardCover');
 let cards = document.querySelectorAll('.card');
 let result = document.querySelector('#memGame-Result');
 const imgArray = ['img/lolaOne.jpg','img/lolaTwo.jpg', 'img/lolaTHree.jpg'];
+const imgId = ['lolaOne', 'lolaTwo', 'lolaThree'];
 
 
-/*
+
 function randomNum() {
     return Math.floor(Math.random() * 3);
 }
 
+/*Card is given a random source and cardCover is given a ID to match*/
+
 function generateCards() {
     for (let i = 0; cards.length; i++) {
-        cards[i].src = imgArray[randomNum()];
+        let random = randomNum();
+        cards[i].src = imgArray[random];
+        cardCover[i].setAttribute('id', imgId[random]);
     }
 }
 
+/*
 genCards.addEventListener('click', generateCards);
 */
 
 
 for (let i = 0; i < cardCover.length; i++) {
-   cardCover = cardCover[i];
-   cardCover.addEventListener('click', displayCard);
-   cardCover.addEventListener('click', checkPair);
+   cardCover[i].addEventListener('click', displayCard);
+   cardCover[i].addEventListener('click', checkPair);
 };
 
 function displayCard() {
@@ -36,10 +41,9 @@ function displayCard() {
 
 function checkPair() {
 
-/*need to push child of cardCover*/
     flippedCards.push(this);
 
-    if (flippedCards[0].src === flippedCards[1].src) {
+    if (flippedCards[0].id === flippedCards[1].id) {
         matchedCards();
     } else {
         unmatchedCards();
@@ -47,9 +51,9 @@ function checkPair() {
 }
 
 function matchedCards() {
-
+    console.log('matched');
 }
 
 function unmatchedCards() {
-
+    console.log('unmatched');
 }
