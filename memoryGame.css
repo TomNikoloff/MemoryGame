@@ -42,6 +42,10 @@ body {
     background-color: #252934;
 }
 
+.matched {
+    border: #8c52ff 5px solid !important;
+}
+
 .open{
     background-color: transparent !important;
 }

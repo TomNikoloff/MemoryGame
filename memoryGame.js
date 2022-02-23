@@ -48,12 +48,24 @@ function checkPair() {
     } else {
         unmatchedCards();
     }
+
+    function matchedCards() {
+        console.log('matched');
+        let cardOne = flippedCards[0].children[0];
+        cardOne.classList.add('matched');
+        let cardTwo = flippedCards[1].children[0];
+        cardTwo.classList.add('matched');
+        
+        /*message('Well Done!!!');*/
+    }
+    
+    function unmatchedCards() {
+        console.log('unmatched');
+        
+        /*message('Boooo');*/
+    }
 }
 
-function matchedCards() {
-    console.log('matched');
-}
-
-function unmatchedCards() {
-    console.log('unmatched');
+function message(x) {
+    alert(x);
 }
