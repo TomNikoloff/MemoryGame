@@ -44,6 +44,8 @@ body {
 
 .matched {
     border: #8c52ff 5px solid !important;
+    animation-name: bounceBack;
+    animation-duration: 0.75s;
 }
 
 .open{
@@ -72,6 +74,43 @@ body {
 #genBtn:hover {
     color: var(--pseudo-color);
 }
+
+.unmatched {
+    animation-name: pulse;
+    animation-duration: 0.75s;
+    border: #ff5757 5px solid !important;
+}
+
+/*Game Animations Start*/
+
+@keyframes pulse {
+    from {
+      transform: scale3d(1, 1, 1);
+    }
+  
+    50% {
+      transform: scale3d(1.2, 1.2, 1.2);
+    }
+  
+    to {
+      transform: scale3d(1, 1, 1);
+    }
+  }
+
+@keyframes bounceBack {
+    from {
+        transform: scale3d(1, 1, 1);
+    }
+
+    50% {
+        transform: scale3d(1.1, 1, 0.9);
+    }
+
+    to {
+        transform: scale3d(0.9, 1, 1.1);
+    }
+}
+/*Game Animations End*/
 
 /*Link Animations Start*/
 
