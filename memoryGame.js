@@ -64,16 +64,21 @@ function matchedCards() {
 function unmatchedCards() {
     console.log('unmatched');
 
-    for (let i = 0; i < flippedCards.length; i++) {
-        flippedCards[i].classList.remove("open", "disableClick");
-    }
+    flippedCards[0].classList.add("unmatched");
+    flippedCards[1].classList.add("unmatched");
+
+    setTimeout( function() {
+        for (let i = 0; i < flippedCards.length; i++) {
+            flippedCards[i].classList.remove("open", "disableClick");
+        }
+    }, 1200)
+
 
     flippedCards = [];
 
 
-    /*Flip cards back over*/
-
 }
+
 
 function message(x) {
     alert(x);
