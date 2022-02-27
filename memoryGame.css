@@ -97,20 +97,6 @@ body {
     }
   }
 
-@keyframes bounceBack {
-    from {
-        transform: scale3d(1, 1, 1);
-    }
-
-    50% {
-        transform: scale3d(1.1, 1, 0.9);
-    }
-
-    to {
-        transform: scale3d(0.9, 1, 1.1);
-    }
-}
-
 @keyframes rubberBand {
     from {
       transform: scale3d(1, 1, 1);
