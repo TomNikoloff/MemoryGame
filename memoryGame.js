@@ -64,19 +64,19 @@ function matchedCards() {
 function unmatchedCards() {
     console.log('unmatched');
 
-    flippedCards[0].classList.add("unmatched");
-    flippedCards[1].classList.add("unmatched");
+    let cardOne = flippedCards[0].children[0];
+    cardOne.classList.add("unmatched");
+    let cardTwo = flippedCards[1].children[0];
+    cardTwo.classList.add("unmatched");
 
     setTimeout( function() {
         for (let i = 0; i < flippedCards.length; i++) {
             flippedCards[i].classList.remove("open", "disableClick");
         }
+        cardOne.classList.remove("unmatched");
+        cardTwo.classList.remove("unmatched");
         flippedCards = [];
     }, 1200)
-
-
-
-
 }
 
 
