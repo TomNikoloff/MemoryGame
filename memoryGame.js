@@ -71,10 +71,10 @@ function unmatchedCards() {
         for (let i = 0; i < flippedCards.length; i++) {
             flippedCards[i].classList.remove("open", "disableClick");
         }
+        flippedCards = [];
     }, 1200)
 
 
-    flippedCards = [];
 
 
 }
