@@ -6,17 +6,24 @@ let cardCover = document.querySelectorAll('.cardCover');
 let cards = document.querySelectorAll('.card');
 let result = document.querySelector('#memGame-Result');
 const imgArray = ['img/lolaOne.jpg','img/lolaTwo.jpg', 'img/lolaTHree.jpg'];
+
+
+//imgArray with each item appearing twice
+const doubleImgArray = imgArray.concat(imgArray); 
+
 const imgId = ['lolaOne', 'lolaTwo', 'lolaThree'];
 
-
-
-function randomNum() {
-    return Math.floor(Math.random() * 3);
-}
 
 /*Card is given a random source and cardCover is given a ID to match*/
 
 function generateCards() {
+    while (doubleImgArray.length) {
+        const randomNum = Math.floor(Math.random() * doubleImgArray.length);
+        const randomCard = doubleImgArray[randomNum];
+    }
+
+
+
     for (let i = 0; i < cards.length; i++) {
         let random = randomNum();
         cards[i].src = imgArray[random];
