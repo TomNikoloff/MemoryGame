@@ -17,7 +17,7 @@ function randomNum() {
 /*Card is given a random source and cardCover is given a ID to match*/
 
 function generateCards() {
-    for (let i = 0; cards.length; i++) {
+    for (let i = 0; i < cards.length; i++) {
         let random = randomNum();
         cards[i].src = imgArray[random];
         cardCover[i].setAttribute('id', imgId[random]);
