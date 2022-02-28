@@ -14,20 +14,17 @@ const doubleImgArray = imgArray.concat(imgArray);
 const imgId = ['lolaOne', 'lolaTwo', 'lolaThree'];
 
 
-/*Card is given a random source and cardCover is given a ID to match*/
 
 function generateCards() {
     while (doubleImgArray.length) {
         const randomNum = Math.floor(Math.random() * doubleImgArray.length);
         const randomCard = doubleImgArray[randomNum];
-    }
 
+        doubleImgArray.splice(randomNum, 1);
 
-
-    for (let i = 0; i < cards.length; i++) {
-        let random = randomNum();
-        cards[i].src = imgArray[random];
-        cardCover[i].setAttribute('id', imgId[random]);
+        for (let i = 0; i < cards.length; i++) {
+            cards[i].src = randomCard;
+        }
     }
 }
 
