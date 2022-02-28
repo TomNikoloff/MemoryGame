@@ -22,9 +22,15 @@ function generateCards() {
 
         doubleImgArray.splice(randomNum, 1);
 
+        console.log(randomCard);
+        console.log(cards);
+
+        cards[randomNum].src = randomCard;
+        /*
         for (let i = 0; i < cards.length; i++) {
             cards[i].src = randomCard;
         }
+        */
     }
 }
 
