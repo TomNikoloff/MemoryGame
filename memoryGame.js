@@ -13,12 +13,15 @@ const doubleImgArray = imgArray.concat(imgArray);
 
 const imgId = ['lolaOne', 'lolaTwo', 'lolaThree'];
 
+const doubleImgId = imgId.concat(imgId);
+
 
 
 function generateCards() {
     while (doubleImgArray.length) {
         const randomNum = Math.floor(Math.random() * doubleImgArray.length);
         const randomCard = doubleImgArray[randomNum];
+        const randomId = 
 
         doubleImgArray.splice(randomNum, 1);
 
@@ -26,6 +29,7 @@ function generateCards() {
         console.log(cards);
 
         cards[randomNum].src = randomCard;
+        cardCover[randomNum].setAttribute('id', )
         /*
         for (let i = 0; i < cards.length; i++) {
             cards[i].src = randomCard;
@@ -34,9 +38,9 @@ function generateCards() {
     }
 }
 
-/*
+
 genCards.addEventListener('click', generateCards);
-*/
+
 
 
 for (let i = 0; i < cardCover.length; i++) {
