@@ -5,35 +5,34 @@ const genCards = document.querySelector('#genBtn');
 let cardCover = document.querySelectorAll('.cardCover');
 let cards = document.querySelectorAll('.card');
 let result = document.querySelector('#memGame-Result');
-const imgArray = ['img/lolaOne.jpg','img/lolaTwo.jpg', 'img/lolaTHree.jpg'];
+const imgArray = ['img/lolaOne.jpg','img/lolaTwo.jpg', 'img/lolaTHree.jpg','img/lolaOne.jpg','img/lolaTwo.jpg', 'img/lolaTHree.jpg'];
+
+const imgId = ['lolaOne', 'lolaTwo', 'lolaThree','lolaOne', 'lolaTwo', 'lolaThree'];
 
 
-//imgArray with each item appearing twice
-const doubleImgArray = imgArray.concat(imgArray); 
 
-const imgId = ['lolaOne', 'lolaTwo', 'lolaThree'];
 
-const doubleImgId = imgId.concat(imgId);
 
 
 
 function generateCards() {
-    while (doubleImgArray.length) {
-        const randomNum = Math.floor(Math.random() * doubleImgArray.length);
-        const randomCard = doubleImgArray[randomNum];
-        const randomId = doubleImgId[randomNum];
+    while (imgArray.length) {
+        const randomNum = Math.floor(Math.random() * imgArray.length);
+        const randomCard = imgArray[randomNum];
+        const randomId = imgId[randomNum];
+        const cardsTest = document.querySelectorAll('.card');
+        const cardCoverTest = document.querySelectorAll('.cardCover');
 
-        doubleImgArray.splice(randomNum, 1);
-        doubleImgId.splice(randomNum, 1);
+        console.log(randomNum);
+        imgArray.splice(randomNum, 1);
+        imgId.splice(randomNum, 1);
 
         cards[randomNum].src = randomCard;
         cardCover[randomNum].setAttribute('id', randomId);
-        /*
-        for (let i = 0; i < cards.length; i++) {
-            cards[i].src = randomCard;
-        }
-        */
+
     }
+
+
 }
 
 
