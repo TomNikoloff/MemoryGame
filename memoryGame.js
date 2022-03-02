@@ -21,15 +21,13 @@ function generateCards() {
     while (doubleImgArray.length) {
         const randomNum = Math.floor(Math.random() * doubleImgArray.length);
         const randomCard = doubleImgArray[randomNum];
-        const randomId = 
+        const randomId = doubleImgId[randomNum];
 
         doubleImgArray.splice(randomNum, 1);
-
-        console.log(randomCard);
-        console.log(cards);
+        doubleImgId.splice(randomNum, 1);
 
         cards[randomNum].src = randomCard;
-        cardCover[randomNum].setAttribute('id', )
+        cardCover[randomNum].setAttribute('id', randomId);
         /*
         for (let i = 0; i < cards.length; i++) {
             cards[i].src = randomCard;
