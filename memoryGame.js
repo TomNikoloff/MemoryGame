@@ -1,4 +1,6 @@
 let flippedCards = [];
+let moves = 0;
+let counter = document.querySelector('.moves');
 
 const genCards = document.querySelector('#genBtn');
 let cardCover = document.querySelectorAll('.cardCover');
@@ -23,7 +25,7 @@ document.body.onload = startGame();
 
 
 function startGame() {
-    let counter = 0;
+    let shuffleCounter = 0;
 
     while (doubleImgItems.length) {
         
@@ -36,9 +38,9 @@ function startGame() {
         doubleImgItems.splice(randomIndex, 1);
         doubleImgId.splice(randomIndex, 1);
         
-        cards[counter].src = randomCard.src;
-        cardCover[counter].setAttribute('id', randomCardCover);
-        counter++;
+        cards[shuffleCounter].src = randomCard.src;
+        cardCover[shuffleCounter].setAttribute('id', randomCardCover);
+        shuffleCounter++;
     }
 
 
@@ -60,13 +62,15 @@ function displayCard() {
 }
 
 function checkPair() {
-
     flippedCards.push(this);
-
-    if (flippedCards[0].id === flippedCards[1].id) {
-        matchedCards();
-    } else {
-        unmatchedCards();
+    let length = flippedCards.length;
+    if (length === 2) {
+        movesCounter();
+        if (flippedCards[0].id === flippedCards[1].id) {
+            matchedCards();
+        } else {
+            unmatchedCards();
+        }
     }
 }
 
@@ -98,3 +102,35 @@ function unmatchedCards() {
         flippedCards = [];
     }, 1200)
 }
+
+function movesCounter() {
+    moves++
+    counter.textContent = moves;
+    if (moves == 1) {
+        second = 0;
+        minute = 0;
+        hour = 0;
+        startTimer();
+    }
+}
+
+let second = 0,
+minute = 0,
+hour = 0;
+
+let timer = document.querySelector('.timer');
+
+function startTimer() {
+    timer.textContent = minute + "mins " + second + "secs"
+    second++;
+    if (second == 60) {
+        minute++;
+        second = 0;
+    }
+    if (minute == 60) {
+        hour++;
+        minute = 0;
+    }
+}
+
+
