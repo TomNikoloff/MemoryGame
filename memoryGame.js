@@ -11,9 +11,18 @@ const imgItems = [
     {src: "img/lolaOne.jpg"},
     {src: "img/lolaTwo.jpg"},
     {src: "img/lolaTHree.jpg"},
+    {src: "img/lolaFour.jpg"},
+    {src: "img/lolaFive.jpg"},
+    {src: "img/lolaSix.jpg"},
+    {src: "img/lolaSeven.jpg"},
+    {src: "img/lolaEight.jpg"},
+    {src: "img/lolaNine.jpg"},
+    {src: "img/lolaTen.jpg"},
+    {src: "img/lolaEleven.jpg"},
+    {src: "img/lolaTwelve.jpg"},
   ];
 
-const imgId = ['lolaOne', 'lolaTwo', 'lolaThree'];
+const imgId = ['lolaOne', 'lolaTwo', 'lolaThree', 'lolaFour', 'lolaFive', 'lolaSix', 'lolaSeven', 'lolaEight', 'lolaNine', 'lolaTen', 'lolaEleven', 'lolaTwelve'];
 
 //All items in imgItems & imgId doubled. All items now appear twice
 const doubleImgItems = imgItems.concat(imgItems);
@@ -138,5 +147,5 @@ function startTimer() {
           minute = 0;
         }
     }, 1000);
-  }
+}
 
