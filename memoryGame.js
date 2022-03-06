@@ -51,14 +51,19 @@ function startGame() {
         cardCover[shuffleCounter].setAttribute('id', randomCardCover);
         shuffleCounter++;
     }
-
-
 }
 
-/*
-genCards.addEventListener('click', generateCards);
-*/
 
+genCards.addEventListener('click', reset);
+
+
+function reset() {
+    for (let i = 0; i < cards.length; i++) {
+        cards[i].setAttribute('src', '');
+        cardCover[i].removeAttribute('id');
+    }
+    startGame();
+}
 
 for (let i = 0; i < cardCover.length; i++) {
    cardCover[i].addEventListener('click', displayCard);
