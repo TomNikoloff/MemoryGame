@@ -25,12 +25,15 @@ function generateCards() {
         
         // Pick random element
         const randomIndex = Math.floor(Math.random() * doubleImgItems.length);
-        const randomElement = doubleImgItems[randomIndex];
+        const randomCard = doubleImgItems[randomIndex];
+        const randomCardCover = doubleImgId[randomIndex];
         
         // Remove element
         doubleImgItems.splice(randomIndex, 1);
+        doubleImgId.splice(randomIndex, 1);
         
-        cards[counter].src = randomElement.src;
+        cards[counter].src = randomCard.src;
+        cardCover[counter].setAttribute('id', randomCardCover);
         counter++;
     }
 
