@@ -103,6 +103,10 @@ function unmatchedCards() {
     }, 1200)
 }
 
+let second = 0,
+minute = 0,
+hour = 0;
+
 function movesCounter() {
     moves++
     counter.textContent = moves;
@@ -114,23 +118,25 @@ function movesCounter() {
     }
 }
 
-let second = 0,
-minute = 0,
-hour = 0;
-
 let timer = document.querySelector('.timer');
+let interval;
 
 function startTimer() {
-    timer.textContent = minute + "mins " + second + "secs"
-    second++;
-    if (second == 60) {
-        minute++;
-        second = 0;
-    }
-    if (minute == 60) {
-        hour++;
-        minute = 0;
-    }
-}
-
+    interval = setInterval(function () {
+        if (hour == 0) {
+            timer.textContent = minute + " Mins " + second + " Secs";
+        } else {
+            timer.textContent = hour + " Hours " + minute + " Mins " + second + " Secs";
+        }
+        second++;
+        if (second == 60) {
+          minute++;
+          second = 0;
+        }
+        if (minute == 60) {
+          hour++;
+          minute = 0;
+        }
+    }, 1000);
+  }
 
