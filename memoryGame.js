@@ -1,6 +1,5 @@
 let flippedCards = [];
 
-
 const genCards = document.querySelector('#genBtn');
 let cardCover = document.querySelectorAll('.cardCover');
 let cards = document.querySelectorAll('.card');
@@ -18,7 +17,12 @@ const imgId = ['lolaOne', 'lolaTwo', 'lolaThree'];
 const doubleImgItems = imgItems.concat(imgItems);
 const doubleImgId = imgId.concat(imgId);
 
-function generateCards() {
+
+//Cards shuffled on page refresh
+document.body.onload = startGame();
+
+
+function startGame() {
     let counter = 0;
 
     while (doubleImgItems.length) {
@@ -40,9 +44,9 @@ function generateCards() {
 
 }
 
-
+/*
 genCards.addEventListener('click', generateCards);
-
+*/
 
 
 for (let i = 0; i < cardCover.length; i++) {
