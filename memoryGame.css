@@ -26,10 +26,6 @@ body {
     color: var(--pseudo-color);
 }
 
-.moves {
-  
-}
-
 .cardCover {
     height: 200px;
     background-color: #252934;

@@ -60,7 +60,9 @@ genCards.addEventListener('click', reset);
 function reset() {
     for (let i = 0; i < cards.length; i++) {
         cards[i].setAttribute('src', '');
+        cards[i].classList.remove('matched');
         cardCover[i].removeAttribute('id');
+        cardCover[i].classList.remove('open', 'disableClick');
     }
     
     doubleImgItems = imgItems.concat(imgItems);
