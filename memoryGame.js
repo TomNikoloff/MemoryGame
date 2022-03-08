@@ -25,8 +25,8 @@ const imgItems = [
 const imgId = ['lolaOne', 'lolaTwo', 'lolaThree', 'lolaFour', 'lolaFive', 'lolaSix', 'lolaSeven', 'lolaEight', 'lolaNine', 'lolaTen', 'lolaEleven', 'lolaTwelve'];
 
 //All items in imgItems & imgId doubled. All items now appear twice
-const doubleImgItems = imgItems.concat(imgItems);
-const doubleImgId = imgId.concat(imgId);
+let doubleImgItems = imgItems.concat(imgItems);
+let doubleImgId = imgId.concat(imgId);
 
 
 //Cards shuffled on page refresh
@@ -62,6 +62,10 @@ function reset() {
         cards[i].setAttribute('src', '');
         cardCover[i].removeAttribute('id');
     }
+    
+    doubleImgItems = imgItems.concat(imgItems);
+    doubleImgId = imgId.concat(imgId);
+    console.log(doubleImgId)
     startGame();
 }
 
