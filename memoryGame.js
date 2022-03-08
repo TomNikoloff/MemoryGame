@@ -65,7 +65,13 @@ function reset() {
     
     doubleImgItems = imgItems.concat(imgItems);
     doubleImgId = imgId.concat(imgId);
-    console.log(doubleImgId)
+    moves = 0;
+    counter.textContent = 0;
+    second = 0;
+    minute = 0;
+    hour = 0;
+    timer.textContent = "0 Mins 0 Secs";
+    clearInterval(interval);
     startGame();
 }
 
