@@ -166,3 +166,24 @@ function startTimer() {
     }, 1000);
 }
 
+
+function results() {
+    function displayModal() {
+        modal.style.display = "block";
+        let x = timer.textContent;
+        let y = moves.textContent;
+    }
+
+
+    close.addEventListener('click', closeModal);
+
+    function closeModal() {
+        modal.style.display = "none"
+    }
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+    }
+}
