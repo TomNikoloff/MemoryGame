@@ -166,14 +166,20 @@ function startTimer() {
     }, 1000);
 }
 
+const playAgain = document.getElementById('playAgain');
+const movesElement =  document.getElementById('moves');
+const timeElement = document.getElementById('time');
 
 function results() {
     function displayModal() {
         modal.style.display = "block";
         let x = timer.textContent;
         let y = moves.textContent;
+        movesElement.textContent = x;
+        timeElement.textContent = x;
     }
 
+    playAgain.addEventListener('click', reset);
 
     close.addEventListener('click', closeModal);
 
