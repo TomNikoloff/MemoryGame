@@ -168,6 +168,7 @@ function startTimer() {
 }
 
 let modal = document.getElementById('modal');
+let close = document.querySelector('close');
 let matches = document.getElementsByClassName('matched');
 let playAgain = document.getElementById('playAgain');
 let movesElement =  document.getElementById('moves');
@@ -175,7 +176,6 @@ let timeElement = document.getElementById('time');
 
 function congrats() {
         if (matches.length == 24) {
-            console.log('test');
             clearInterval(interval);
             let finalTime = timer.textContent;
     
