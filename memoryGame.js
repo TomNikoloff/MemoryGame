@@ -167,34 +167,36 @@ function startTimer() {
     }, 1000);
 }
 
+let modal = document.getElementById('modal');
 let matches = document.getElementsByClassName('matched');
 let playAgain = document.getElementById('playAgain');
 let movesElement =  document.getElementById('moves');
 let timeElement = document.getElementById('time');
 
 function congrats() {
-    console.log('testing');
-    if (matches == 24) {
-        clearInterval(interval);
-        let finalTime = timer.textContent;
-
-        modal.style.display = "block";
-        movesElement.textContent = "You did it in " + moves + ".";
-        timeElement.textContent = "It took you " + finalTime;
-
-        close.addEventListener('click', closeModal);
-        playAgain.addEventListener('click', reset);
-
-        function closeModal() {
-            modal.style.display = "none";
-        }
+        if (matches.length == 24) {
+            console.log('test');
+            clearInterval(interval);
+            let finalTime = timer.textContent;
     
-        window.onclick = function(event) {
-            if (event.target == modal) {
-              modal.style.display = "none";
+            modal.style.display = "block";
+            movesElement.textContent = "You did it in " + moves + ".";
+            timeElement.textContent = "It took you " + finalTime;
+    
+            close.addEventListener('click', closeModal);
+            playAgain.addEventListener('click', reset);
+    
+            function closeModal() {
+                modal.style.display = "none";
             }
-        } 
-    }
+        
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                  modal.style.display = "none";
+                }
+            } 
+        }
+
 }
 
 
