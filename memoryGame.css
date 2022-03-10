@@ -95,6 +95,13 @@ body {
   background-color: rgba(0,0,0,0.8); 
 }
 
+/*Show Modal*/
+.show {
+  visibility: visible !important;
+  /*
+  opacity: 100 !important;*/
+}
+
 /* Modal Content */
 .modalContent {
   background-color: #fefefe;

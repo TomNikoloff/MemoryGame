@@ -80,6 +80,7 @@ function reset() {
 for (let i = 0; i < cardCover.length; i++) {
    cardCover[i].addEventListener('click', displayCard);
    cardCover[i].addEventListener('click', checkPair);
+   cardCover[i].addEventListener('click', congrats);
 };
 
 function displayCard() {
@@ -166,30 +167,34 @@ function startTimer() {
     }, 1000);
 }
 
-const playAgain = document.getElementById('playAgain');
-const movesElement =  document.getElementById('moves');
-const timeElement = document.getElementById('time');
+let matches = document.getElementsByClassName('matched');
+let playAgain = document.getElementById('playAgain');
+let movesElement =  document.getElementById('moves');
+let timeElement = document.getElementById('time');
 
-function results() {
-    function displayModal() {
+function congrats() {
+    console.log('testing');
+    if (matches == 24) {
+        clearInterval(interval);
+        let finalTime = timer.textContent;
+
         modal.style.display = "block";
-        let x = timer.textContent;
-        let y = moves.textContent;
-        movesElement.textContent = x;
-        timeElement.textContent = x;
-    }
+        movesElement.textContent = "You did it in " + moves + ".";
+        timeElement.textContent = "It took you " + finalTime;
 
-    playAgain.addEventListener('click', reset);
+        close.addEventListener('click', closeModal);
+        playAgain.addEventListener('click', reset);
 
-    close.addEventListener('click', closeModal);
-
-    function closeModal() {
-        modal.style.display = "none"
-    }
-
-    window.onclick = function(event) {
-        if (event.target == modal) {
-          modal.style.display = "none";
+        function closeModal() {
+            modal.style.display = "none";
         }
+    
+        window.onclick = function(event) {
+            if (event.target == modal) {
+              modal.style.display = "none";
+            }
+        } 
     }
 }
+
+
