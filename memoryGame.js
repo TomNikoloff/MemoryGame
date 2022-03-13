@@ -180,7 +180,7 @@ function congrats() {
             let finalTime = timer.textContent;
     
             modal.style.display = "block";
-            movesElement.textContent = "You did it in " + moves + ".";
+            movesElement.textContent = "You did it in " + moves + "moves.";
             timeElement.textContent = "It took you " + finalTime;
     
             close.addEventListener('click', closeModal);
