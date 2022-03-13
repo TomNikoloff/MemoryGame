@@ -81,6 +81,10 @@ body {
     border: #ff5757 5px solid !important;
 }
 
+#playAgain:hover {
+  color: var(--pseudo-color);
+}
+
 /*Modal Background*/
 #modal {
   display: none; 
