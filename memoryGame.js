@@ -168,7 +168,7 @@ function startTimer() {
 }
 
 let modal = document.getElementById('modal');
-let close = document.querySelector('close');
+let close = document.querySelector('.close');
 let matches = document.getElementsByClassName('matched');
 let playAgain = document.getElementById('playAgain');
 let movesElement =  document.getElementById('moves');
@@ -184,19 +184,22 @@ function congrats() {
             timeElement.textContent = "It took you " + finalTime;
     
             close.addEventListener('click', closeModal);
-            playAgain.addEventListener('click', reset);
-    
-            function closeModal() {
-                modal.style.display = "none";
-            }
-        
-            window.onclick = function(event) {
-                if (event.target == modal) {
-                  modal.style.display = "none";
-                }
-            } 
+            playAgain.addEventListener('click', restart);
         }
-
 }
 
+function closeModal() {
+    modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+} 
+
+function restart() {
+    closeModal();
+    reset();
+}
 
